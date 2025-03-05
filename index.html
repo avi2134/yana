@@ -4,138 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yana Jain - Portfolio</title>
-    <style>
-        /* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #121212;
-    color: #fff;
-    overflow-x: hidden;
-    text-align: center; /* Ensures all content centers properly */
-}
-
-h1, h2 {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    margin: 10px auto;
-    max-width: 80%;
+    80%;
     line-height: 1.5;
 }
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #ff8a00, #e52e71);
-    padding: 50px 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Intro Section */
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px;
-    text-align: center;
-}
-
-.intro img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Swiper Gallery */
-.swiper-container {
-    width: 90%;
-    max-width: 600px; /* Restricts to phone-friendly size */
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    max-height: 90vh; /* Ensures it fits on the screen */
-    object-fit: contain; /* Ensures full image is visible */
-    border-radius: 10px;
-}
-
-/* Swiper Navigation Buttons */
-.swiper-button-next, .swiper-button-prev {
-    color: #fff !important;
-    position: absolute;
-    top: 50%; /* Centers vertically */
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-/* Center section descriptions */
-section h2 {
-    margin-bottom: 5px;
-}
-
-section p {
-    font-size: 16px;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
-
-/* Masonry Grid */
-.masonry-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.masonry-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Video Sections */
-video {
-    display: block;
-    width: 90%;
-    max-width: 600px;
-    max-height: 500px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Footer */
-footer {
-    background: #222;
-    padding: 20px;
-    text-align: center;
-    margin-top: 30px;
-}
-        </style>
-<!--     <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@latest/bundled/lenis.min.js"></script>
-<!--     <script defer src="script.js"></script> -->
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -196,40 +75,5 @@ footer {
     <footer>
         <p>Phone:  7019697622 | Email: yanajain0011@gmail.com  | Instagram: @yanacurates</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    AOS.init();
-
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { 
-            nextEl: ".swiper-button-next", 
-            prevEl: ".swiper-button-prev" 
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-    });
-
-    const lenis = new Lenis();
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // GSAP Animation for Intro Text
-    gsap.from(".intro-text", {
-        duration: 1.5,
-        y: -50,
-        opacity: 0,
-        ease: "power3.out",
-    });
-});
-
-    </script>
 </body>
 </html>
